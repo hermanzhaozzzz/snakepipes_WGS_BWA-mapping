@@ -1,0 +1,404 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 4
+Job counts:
+	count	jobs
+	1	all
+	12	bam2bigwig_CPM
+	12	bam2bigwig_RPKM
+	25
+
+[Tue Nov 17 20:51:30 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.CPM.bw
+    jobid: 17
+    reason: Missing output files: ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.CPM.bw
+    wildcards: sample=HN-HEK4-All-Input_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 17 with external jobid '191503'.
+
+[Tue Nov 17 20:51:30 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_EMX1-All-Input_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_EMX1-All-Input_rep2.RPKM.bw
+    jobid: 2
+    reason: Missing output files: ../bigwig/DetectSeq_EMX1-All-Input_rep2.RPKM.bw
+    wildcards: sample=EMX1-All-Input_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_EMX1-All-Input_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_EMX1-All-Input_rep2.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 2 with external jobid '191504'.
+
+[Tue Nov 17 20:51:30 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.RPKM.bw
+    jobid: 7
+    reason: Missing output files: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.RPKM.bw
+    wildcards: sample=HN-HEK4-All-PD_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 7 with external jobid '191505'.
+
+[Tue Nov 17 20:51:30 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_VEGFA-All-Input_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_VEGFA-All-Input_rep1.RPKM.bw
+    jobid: 9
+    reason: Missing output files: ../bigwig/DetectSeq_VEGFA-All-Input_rep1.RPKM.bw
+    wildcards: sample=VEGFA-All-Input_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_VEGFA-All-Input_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_VEGFA-All-Input_rep1.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 9 with external jobid '191506'.
+[Tue Nov 17 21:10:08 2020]
+Finished job 2.
+1 of 25 steps (4%) done
+[Tue Nov 17 21:11:00 2020]
+Finished job 17.
+2 of 25 steps (8%) done
+[Tue Nov 17 21:25:23 2020]
+Finished job 7.
+3 of 25 steps (12%) done
+[Tue Nov 17 21:26:55 2020]
+Finished job 9.
+4 of 25 steps (16%) done
+
+[Tue Nov 17 21:26:55 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.CPM.bw
+    jobid: 18
+    reason: Missing output files: ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.CPM.bw
+    wildcards: sample=HN-HEK4-All-Input_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 18 with external jobid '191511'.
+
+[Tue Nov 17 21:26:56 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_EMX1-All-PD_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_EMX1-All-PD_rep1.RPKM.bw
+    jobid: 3
+    reason: Missing output files: ../bigwig/DetectSeq_EMX1-All-PD_rep1.RPKM.bw
+    wildcards: sample=EMX1-All-PD_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_EMX1-All-PD_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_EMX1-All-PD_rep1.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 3 with external jobid '191512'.
+
+[Tue Nov 17 21:26:56 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_VEGFA-All-Input_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_VEGFA-All-Input_rep1.CPM.bw
+    jobid: 21
+    reason: Missing output files: ../bigwig/DetectSeq_VEGFA-All-Input_rep1.CPM.bw
+    wildcards: sample=VEGFA-All-Input_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_VEGFA-All-Input_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_VEGFA-All-Input_rep1.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 21 with external jobid '191513'.
+
+[Tue Nov 17 21:26:56 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_VEGFA-All-Input_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_VEGFA-All-Input_rep2.RPKM.bw
+    jobid: 10
+    reason: Missing output files: ../bigwig/DetectSeq_VEGFA-All-Input_rep2.RPKM.bw
+    wildcards: sample=VEGFA-All-Input_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_VEGFA-All-Input_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_VEGFA-All-Input_rep2.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 10 with external jobid '191514'.
+[Tue Nov 17 21:38:02 2020]
+Finished job 3.
+5 of 25 steps (20%) done
+[Tue Nov 17 21:46:40 2020]
+Finished job 18.
+6 of 25 steps (24%) done
+[Tue Nov 17 21:53:15 2020]
+Finished job 21.
+7 of 25 steps (28%) done
+[Tue Nov 17 22:03:27 2020]
+Finished job 10.
+8 of 25 steps (32%) done
+
+[Tue Nov 17 22:03:27 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_VEGFA-All-PD_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_VEGFA-All-PD_rep1.CPM.bw
+    jobid: 23
+    reason: Missing output files: ../bigwig/DetectSeq_VEGFA-All-PD_rep1.CPM.bw
+    wildcards: sample=VEGFA-All-PD_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_VEGFA-All-PD_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_VEGFA-All-PD_rep1.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 23 with external jobid '191519'.
+
+[Tue Nov 17 22:03:27 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_EMX1-All-PD_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_EMX1-All-PD_rep1.CPM.bw
+    jobid: 15
+    reason: Missing output files: ../bigwig/DetectSeq_EMX1-All-PD_rep1.CPM.bw
+    wildcards: sample=EMX1-All-PD_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_EMX1-All-PD_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_EMX1-All-PD_rep1.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 15 with external jobid '191520'.
+
+[Tue Nov 17 22:03:27 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_VEGFA-All-Input_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_VEGFA-All-Input_rep2.CPM.bw
+    jobid: 22
+    reason: Missing output files: ../bigwig/DetectSeq_VEGFA-All-Input_rep2.CPM.bw
+    wildcards: sample=VEGFA-All-Input_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_VEGFA-All-Input_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_VEGFA-All-Input_rep2.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 22 with external jobid '191521'.
+
+[Tue Nov 17 22:03:28 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.RPKM.bw
+    jobid: 8
+    reason: Missing output files: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.RPKM.bw
+    wildcards: sample=HN-HEK4-All-PD_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 8 with external jobid '191522'.
+[Tue Nov 17 22:14:41 2020]
+Finished job 15.
+9 of 25 steps (36%) done
+[Tue Nov 17 22:20:40 2020]
+Finished job 22.
+10 of 25 steps (40%) done
+[Tue Nov 17 22:26:44 2020]
+Finished job 23.
+11 of 25 steps (44%) done
+[Tue Nov 17 22:29:27 2020]
+Finished job 8.
+12 of 25 steps (48%) done
+
+[Tue Nov 17 22:29:27 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_EMX1-All-Input_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_EMX1-All-Input_rep2.CPM.bw
+    jobid: 14
+    reason: Missing output files: ../bigwig/DetectSeq_EMX1-All-Input_rep2.CPM.bw
+    wildcards: sample=EMX1-All-Input_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_EMX1-All-Input_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_EMX1-All-Input_rep2.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 14 with external jobid '191523'.
+
+[Tue Nov 17 22:29:28 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.CPM.bw
+    jobid: 20
+    reason: Missing output files: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.CPM.bw
+    wildcards: sample=HN-HEK4-All-PD_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 20 with external jobid '191524'.
+
+[Tue Nov 17 22:29:28 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_EMX1-All-PD_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_EMX1-All-PD_rep2.RPKM.bw
+    jobid: 4
+    reason: Missing output files: ../bigwig/DetectSeq_EMX1-All-PD_rep2.RPKM.bw
+    wildcards: sample=EMX1-All-PD_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_EMX1-All-PD_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_EMX1-All-PD_rep2.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 4 with external jobid '191525'.
+
+[Tue Nov 17 22:29:29 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_VEGFA-All-PD_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_VEGFA-All-PD_rep2.CPM.bw
+    jobid: 24
+    reason: Missing output files: ../bigwig/DetectSeq_VEGFA-All-PD_rep2.CPM.bw
+    wildcards: sample=VEGFA-All-PD_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_VEGFA-All-PD_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_VEGFA-All-PD_rep2.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 24 with external jobid '191526'.
+[Tue Nov 17 22:41:06 2020]
+Finished job 4.
+13 of 25 steps (52%) done
+[Tue Nov 17 22:44:05 2020]
+Finished job 20.
+14 of 25 steps (56%) done
+[Tue Nov 17 22:48:25 2020]
+Finished job 14.
+15 of 25 steps (60%) done
+[Tue Nov 17 22:57:57 2020]
+Finished job 24.
+16 of 25 steps (64%) done
+
+[Tue Nov 17 22:57:57 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_EMX1-All-Input_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_EMX1-All-Input_rep1.CPM.bw
+    jobid: 13
+    reason: Missing output files: ../bigwig/DetectSeq_EMX1-All-Input_rep1.CPM.bw
+    wildcards: sample=EMX1-All-Input_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_EMX1-All-Input_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_EMX1-All-Input_rep1.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 13 with external jobid '191527'.
+
+[Tue Nov 17 22:57:57 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.RPKM.bw
+    jobid: 6
+    reason: Missing output files: ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.RPKM.bw
+    wildcards: sample=HN-HEK4-All-Input_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 6 with external jobid '191528'.
+
+[Tue Nov 17 22:57:57 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.CPM.bw
+    jobid: 19
+    reason: Missing output files: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.CPM.bw
+    wildcards: sample=HN-HEK4-All-PD_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 19 with external jobid '191529'.
+
+[Tue Nov 17 22:57:58 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_VEGFA-All-PD_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_VEGFA-All-PD_rep1.RPKM.bw
+    jobid: 11
+    reason: Missing output files: ../bigwig/DetectSeq_VEGFA-All-PD_rep1.RPKM.bw
+    wildcards: sample=VEGFA-All-PD_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_VEGFA-All-PD_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_VEGFA-All-PD_rep1.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 11 with external jobid '191530'.
+[Tue Nov 17 23:13:54 2020]
+Finished job 19.
+17 of 25 steps (68%) done
+[Tue Nov 17 23:16:22 2020]
+Finished job 13.
+18 of 25 steps (72%) done
+[Tue Nov 17 23:17:56 2020]
+Finished job 6.
+19 of 25 steps (76%) done
+[Tue Nov 17 23:36:59 2020]
+Finished job 11.
+20 of 25 steps (80%) done
+
+[Tue Nov 17 23:36:59 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_EMX1-All-Input_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_EMX1-All-Input_rep1.RPKM.bw
+    jobid: 1
+    reason: Missing output files: ../bigwig/DetectSeq_EMX1-All-Input_rep1.RPKM.bw
+    wildcards: sample=EMX1-All-Input_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_EMX1-All-Input_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_EMX1-All-Input_rep1.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 1 with external jobid '191532'.
+
+[Tue Nov 17 23:37:00 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep1_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.RPKM.bw
+    jobid: 5
+    reason: Missing output files: ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.RPKM.bw
+    wildcards: sample=HN-HEK4-All-Input_rep1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep1_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 5 with external jobid '191533'.
+
+[Tue Nov 17 23:37:00 2020]
+rule bam2bigwig_CPM:
+    input: ../cbe_bam/293T-bat_EMX1-All-PD_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_EMX1-All-PD_rep2.CPM.bw
+    jobid: 16
+    reason: Missing output files: ../bigwig/DetectSeq_EMX1-All-PD_rep2.CPM.bw
+    wildcards: sample=EMX1-All-PD_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_EMX1-All-PD_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_EMX1-All-PD_rep2.CPM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing CPM
+        
+Submitted job 16 with external jobid '191534'.
+
+[Tue Nov 17 23:37:00 2020]
+rule bam2bigwig_RPKM:
+    input: ../cbe_bam/293T-bat_VEGFA-All-PD_rep2_hg38.MAPQ20.bam
+    output: ../bigwig/DetectSeq_VEGFA-All-PD_rep2.RPKM.bw
+    jobid: 12
+    reason: Missing output files: ../bigwig/DetectSeq_VEGFA-All-PD_rep2.RPKM.bw
+    wildcards: sample=VEGFA-All-PD_rep2
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/bamCoverage --bam ../cbe_bam/293T-bat_VEGFA-All-PD_rep2_hg38.MAPQ20.bam -o ../bigwig/DetectSeq_VEGFA-All-PD_rep2.RPKM.bw -of bigwig --scaleFactor 1 --binSize 10 -p 24 --normalizeUsing RPKM
+        
+Submitted job 12 with external jobid '191535'.
+[Tue Nov 17 23:55:26 2020]
+Finished job 1.
+21 of 25 steps (84%) done
+[Tue Nov 17 23:57:02 2020]
+Finished job 5.
+22 of 25 steps (88%) done
+[Wed Nov 18 00:06:33 2020]
+Finished job 16.
+23 of 25 steps (92%) done
+[Wed Nov 18 00:13:42 2020]
+Finished job 12.
+24 of 25 steps (96%) done
+
+[Wed Nov 18 00:13:42 2020]
+localrule all:
+    input: ../cbe_bam/293T-bat_EMX1-All-Input_rep1_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_EMX1-All-Input_rep2_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_EMX1-All-PD_rep1_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_EMX1-All-PD_rep2_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep1_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_HN-HEK4-All-Input_rep2_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep1_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_HN-HEK4-All-PD_rep2_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_VEGFA-All-Input_rep1_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_VEGFA-All-Input_rep2_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_VEGFA-All-PD_rep1_hg38.MAPQ20.bam, ../cbe_bam/293T-bat_VEGFA-All-PD_rep2_hg38.MAPQ20.bam, ../bigwig/DetectSeq_EMX1-All-Input_rep1.RPKM.bw, ../bigwig/DetectSeq_EMX1-All-Input_rep2.RPKM.bw, ../bigwig/DetectSeq_EMX1-All-PD_rep1.RPKM.bw, ../bigwig/DetectSeq_EMX1-All-PD_rep2.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.RPKM.bw, ../bigwig/DetectSeq_VEGFA-All-Input_rep1.RPKM.bw, ../bigwig/DetectSeq_VEGFA-All-Input_rep2.RPKM.bw, ../bigwig/DetectSeq_VEGFA-All-PD_rep1.RPKM.bw, ../bigwig/DetectSeq_VEGFA-All-PD_rep2.RPKM.bw, ../bigwig/DetectSeq_EMX1-All-Input_rep1.CPM.bw, ../bigwig/DetectSeq_EMX1-All-Input_rep2.CPM.bw, ../bigwig/DetectSeq_EMX1-All-PD_rep1.CPM.bw, ../bigwig/DetectSeq_EMX1-All-PD_rep2.CPM.bw, ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.CPM.bw, ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.CPM.bw, ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.CPM.bw, ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.CPM.bw, ../bigwig/DetectSeq_VEGFA-All-Input_rep1.CPM.bw, ../bigwig/DetectSeq_VEGFA-All-Input_rep2.CPM.bw, ../bigwig/DetectSeq_VEGFA-All-PD_rep1.CPM.bw, ../bigwig/DetectSeq_VEGFA-All-PD_rep2.CPM.bw
+    jobid: 0
+    reason: Input files updated by another job: ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.RPKM.bw, ../bigwig/DetectSeq_EMX1-All-Input_rep1.CPM.bw, ../bigwig/DetectSeq_EMX1-All-PD_rep2.RPKM.bw, ../bigwig/DetectSeq_VEGFA-All-PD_rep2.RPKM.bw, ../bigwig/DetectSeq_VEGFA-All-Input_rep2.CPM.bw, ../bigwig/DetectSeq_EMX1-All-PD_rep1.RPKM.bw, ../bigwig/DetectSeq_VEGFA-All-Input_rep1.CPM.bw, ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.CPM.bw, ../bigwig/DetectSeq_VEGFA-All-PD_rep2.CPM.bw, ../bigwig/DetectSeq_EMX1-All-PD_rep1.CPM.bw, ../bigwig/DetectSeq_VEGFA-All-Input_rep2.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-Input_rep1.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.RPKM.bw, ../bigwig/DetectSeq_VEGFA-All-PD_rep1.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-PD_rep1.CPM.bw, ../bigwig/DetectSeq_EMX1-All-PD_rep2.CPM.bw, ../bigwig/DetectSeq_HN-HEK4-All-PD_rep2.CPM.bw, ../bigwig/DetectSeq_VEGFA-All-PD_rep1.CPM.bw, ../bigwig/DetectSeq_VEGFA-All-Input_rep1.RPKM.bw, ../bigwig/DetectSeq_HN-HEK4-All-Input_rep2.CPM.bw, ../bigwig/DetectSeq_EMX1-All-Input_rep2.RPKM.bw, ../bigwig/DetectSeq_EMX1-All-Input_rep1.RPKM.bw, ../bigwig/DetectSeq_EMX1-All-Input_rep2.CPM.bw
+
+[Wed Nov 18 00:13:42 2020]
+Finished job 0.
+25 of 25 steps (100%) done
+Complete log: /gpfs/user/zhaohuanan/3.project/22.2020-11_1112_JSK_DigenomeSeq_WGS/snakepipes_WGS-BWAmapping/.snakemake/log/2020-11-17T205129.792665.snakemake.log

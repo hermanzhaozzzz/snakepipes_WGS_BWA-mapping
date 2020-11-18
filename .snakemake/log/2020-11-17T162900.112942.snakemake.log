@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 241 of /gpfs/user/zhaohuanan/3.project/22.2020-11_1112_JSK_DigenomeSeq_WGS/snakepipes_WGS-BWAmapping/Snakefile.py:
+Missing input files for rule BAM_index:
+../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam

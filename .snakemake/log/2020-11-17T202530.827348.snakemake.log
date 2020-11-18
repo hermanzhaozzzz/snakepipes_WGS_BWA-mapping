@@ -1,0 +1,51 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 4
+Job counts:
+	count	jobs
+	2	BAM_index
+	1	all
+	3
+
+[Tue Nov 17 20:25:30 2020]
+rule BAM_index:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai
+    jobid: 19
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_HEK4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/sambamba markdup --remove-duplicates --nthreads= 24 --show-progress  --sort-buffer-size 8192         ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam
+        
+Submitted job 19 with external jobid '191499'.
+
+[Tue Nov 17 20:25:31 2020]
+rule BAM_index:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai
+    jobid: 17
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_EMX1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/sambamba markdup --remove-duplicates --nthreads= 24 --show-progress  --sort-buffer-size 8192         ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam
+        
+Submitted job 17 with external jobid '191500'.
+[Wed Nov 18 01:06:02 2020]
+Finished job 17.
+1 of 3 steps (33%) done
+[Wed Nov 18 01:21:00 2020]
+Finished job 19.
+2 of 3 steps (67%) done
+
+[Wed Nov 18 01:21:00 2020]
+localrule all:
+    input: ../fix.fastq/20201117-293T-WGS_.DigenomeSeq_EMX1_R1.fastq.gz, ../fix.fastq/20201117-293T-WGS_.DigenomeSeq_HEK4_R1.fastq.gz, ../fix.fastq/20201117-293T-WGS_.DigenomeSeq_EMX1_R2.fastq.gz, ../fix.fastq/20201117-293T-WGS_.DigenomeSeq_HEK4_R2.fastq.gz, ../fix.fastq/20201117-293T-WGS_.DigenomeSeq_EMX1_R1_cutadapt.fq.gz, ../fix.fastq/20201117-293T-WGS_.DigenomeSeq_HEK4_R1_cutadapt.fq.gz, ../fix.fastq/20201117-293T-WGS_.DigenomeSeq_EMX1_R2_cutadapt.fq.gz, ../fix.fastq/20201117-293T-WGS_.DigenomeSeq_HEK4_R2_cutadapt.fq.gz, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned.out.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned.out.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned.out.fix_RG.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned.out.fix_RG.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta.gz, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta.gz, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai
+    jobid: 0
+    reason: Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai
+
+[Wed Nov 18 01:21:00 2020]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /gpfs/user/zhaohuanan/3.project/22.2020-11_1112_JSK_DigenomeSeq_WGS/snakepipes_WGS-BWAmapping/.snakemake/log/2020-11-17T202530.827348.snakemake.log

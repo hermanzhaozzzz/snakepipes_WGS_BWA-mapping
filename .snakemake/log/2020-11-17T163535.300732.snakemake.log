@@ -1,0 +1,260 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 4
+Job counts:
+	count	jobs
+	2	BAM_index
+	2	Picard_rmdup
+	1	all
+	2	pick_mapped_reads
+	2	pick_unmapped_reads1
+	2	pick_unmapped_reads2
+	2	pick_unmapped_reads3
+	13
+
+[Tue Nov 17 16:35:35 2020]
+rule pick_unmapped_reads1:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.bam
+    jobid: 13
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_EMX1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -@ 24 -b -f 4         ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.bam > ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.bam
+        
+Submitted job 13 with external jobid '191471'.
+
+[Tue Nov 17 16:35:36 2020]
+rule pick_mapped_reads:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    jobid: 18
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_EMX1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -@ 24 -b -F 1804 -q 20          ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.bam > ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+        
+Submitted job 18 with external jobid '191472'.
+
+[Tue Nov 17 16:35:36 2020]
+rule pick_unmapped_reads1:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.bam
+    jobid: 16
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_HEK4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -@ 24 -b -f 4         ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.bam > ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.bam
+        
+Submitted job 16 with external jobid '191473'.
+
+[Tue Nov 17 16:35:36 2020]
+rule pick_mapped_reads:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    jobid: 20
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_HEK4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -@ 24 -b -F 1804 -q 20          ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.bam > ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam
+        
+Submitted job 20 with external jobid '191474'.
+[Tue Nov 17 16:42:13 2020]
+Finished job 16.
+1 of 13 steps (8%) done
+
+[Tue Nov 17 16:42:14 2020]
+rule pick_unmapped_reads2:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta
+    jobid: 15
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_HEK4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -@ 24 ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.bam | awk '{print ">"$1"\n"$10}' > ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta
+        
+Submitted job 15 with external jobid '191476'.
+[Tue Nov 17 16:43:18 2020]
+Finished job 13.
+2 of 13 steps (15%) done
+
+[Tue Nov 17 16:43:18 2020]
+rule pick_unmapped_reads2:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta
+    jobid: 12
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_EMX1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/samtools view -@ 24 ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.bam | awk '{print ">"$1"\n"$10}' > ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta
+        
+Submitted job 12 with external jobid '191477'.
+[Tue Nov 17 16:58:00 2020]
+Finished job 18.
+3 of 13 steps (23%) done
+
+[Tue Nov 17 16:58:00 2020]
+rule Picard_rmdup:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix
+    log: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+    jobid: 17
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_EMX1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/java -Xms90g -Xmx90g -XX:ParallelGCThreads=24         -jar /home/zhaohuanan/zhaohn_HD/1.apps/picard/picard.jar MarkDuplicates         I=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam         O=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam         M=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix         ASO=coordinate         REMOVE_DUPLICATES=true 2>../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+        
+Submitted job 17 with external jobid '191478'.
+Removing temporary output file ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.bam.
+[Tue Nov 17 16:58:33 2020]
+Finished job 15.
+4 of 13 steps (31%) done
+
+[Tue Nov 17 16:58:33 2020]
+rule pick_unmapped_reads3:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta.gz
+    jobid: 14
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta.gz; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_HEK4
+
+
+        pigz -p 24 ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta
+        
+Submitted job 14 with external jobid '191479'.
+Removing temporary output file ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.bam.
+[Tue Nov 17 17:00:42 2020]
+Finished job 12.
+5 of 13 steps (38%) done
+
+[Tue Nov 17 17:00:42 2020]
+rule pick_unmapped_reads3:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta.gz
+    jobid: 11
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta.gz; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_EMX1
+
+
+        pigz -p 24 ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta
+        
+Submitted job 11 with external jobid '191480'.
+[Tue Nov 17 17:05:11 2020]
+Finished job 20.
+6 of 13 steps (46%) done
+
+[Tue Nov 17 17:05:11 2020]
+rule Picard_rmdup:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix
+    log: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+    jobid: 19
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_HEK4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/java -Xms90g -Xmx90g -XX:ParallelGCThreads=24         -jar /home/zhaohuanan/zhaohn_HD/1.apps/picard/picard.jar MarkDuplicates         I=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam         O=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam         M=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix         ASO=coordinate         REMOVE_DUPLICATES=true 2>../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+        
+Submitted job 19 with external jobid '191481'.
+Removing temporary output file ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.unmapped.fasta.
+[Tue Nov 17 17:05:33 2020]
+Finished job 14.
+7 of 13 steps (54%) done
+Removing temporary output file ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.unmapped.fasta.
+[Tue Nov 17 17:06:15 2020]
+Finished job 11.
+8 of 13 steps (62%) done
+[Tue Nov 17 18:34:22 2020]
+Error in rule Picard_rmdup:
+    jobid: 17
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix
+    log: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/java -Xms90g -Xmx90g -XX:ParallelGCThreads=24         -jar /home/zhaohuanan/zhaohn_HD/1.apps/picard/picard.jar MarkDuplicates         I=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam         O=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam         M=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix         ASO=coordinate         REMOVE_DUPLICATES=true 2>../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 191478
+
+Error executing rule Picard_rmdup on cluster (jobid: 17, external: 191478, jobscript: /gpfs/user/zhaohuanan/3.project/22.2020-11_1112_JSK_DigenomeSeq_WGS/snakepipes_WGS-BWAmapping/.snakemake/tmp.q5mwqwtn/snakejob.Picard_rmdup.17.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 17.
+
+[Tue Nov 17 18:34:22 2020]
+rule Picard_rmdup:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix
+    log: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+    jobid: 17
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_EMX1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/java -Xms90g -Xmx90g -XX:ParallelGCThreads=24         -jar /home/zhaohuanan/zhaohn_HD/1.apps/picard/picard.jar MarkDuplicates         I=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam         O=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam         M=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix         ASO=coordinate         REMOVE_DUPLICATES=true 2>../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+        
+Submitted job 17 with external jobid '191484'.
+[Tue Nov 17 18:45:06 2020]
+Error in rule Picard_rmdup:
+    jobid: 19
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix
+    log: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/java -Xms90g -Xmx90g -XX:ParallelGCThreads=24         -jar /home/zhaohuanan/zhaohn_HD/1.apps/picard/picard.jar MarkDuplicates         I=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam         O=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam         M=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix         ASO=coordinate         REMOVE_DUPLICATES=true 2>../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 191481
+
+Error executing rule Picard_rmdup on cluster (jobid: 19, external: 191481, jobscript: /gpfs/user/zhaohuanan/3.project/22.2020-11_1112_JSK_DigenomeSeq_WGS/snakepipes_WGS-BWAmapping/.snakemake/tmp.q5mwqwtn/snakejob.Picard_rmdup.19.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 19.
+
+[Tue Nov 17 18:45:06 2020]
+rule Picard_rmdup:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix
+    log: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+    jobid: 19
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_HEK4
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/java -Xms90g -Xmx90g -XX:ParallelGCThreads=24         -jar /home/zhaohuanan/zhaohn_HD/1.apps/picard/picard.jar MarkDuplicates         I=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20.bam         O=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam         M=../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix         ASO=coordinate         REMOVE_DUPLICATES=true 2>../bam/20201117-293T-WGS_.DigenomeSeq_HEK4_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+        
+Submitted job 19 with external jobid '191485'.
+[Tue Nov 17 20:13:40 2020]
+Error in rule Picard_rmdup:
+    jobid: 17
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix
+    log: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log (check log file(s) for error message)
+    shell:
+        
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/java -Xms90g -Xmx90g -XX:ParallelGCThreads=24         -jar /home/zhaohuanan/zhaohn_HD/1.apps/picard/picard.jar MarkDuplicates         I=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam         O=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam         M=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix         ASO=coordinate         REMOVE_DUPLICATES=true 2>../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: 191484
+
+Error executing rule Picard_rmdup on cluster (jobid: 17, external: 191484, jobscript: /gpfs/user/zhaohuanan/3.project/22.2020-11_1112_JSK_DigenomeSeq_WGS/snakepipes_WGS-BWAmapping/.snakemake/tmp.q5mwqwtn/snakejob.Picard_rmdup.17.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 17.
+
+[Tue Nov 17 20:13:41 2020]
+rule Picard_rmdup:
+    input: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    output: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix
+    log: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+    jobid: 17
+    reason: Missing output files: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam, ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix; Input files updated by another job: ../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam
+    wildcards: date=20201117, cell=293T, seq=WGS, sample=DigenomeSeq_EMX1
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/java -Xms90g -Xmx90g -XX:ParallelGCThreads=24         -jar /home/zhaohuanan/zhaohn_HD/1.apps/picard/picard.jar MarkDuplicates         I=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20.bam         O=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam         M=../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.matrix         ASO=coordinate         REMOVE_DUPLICATES=true 2>../bam/20201117-293T-WGS_.DigenomeSeq_EMX1_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.log
+        
+Submitted job 17 with external jobid '191490'.
+Terminating processes on user request, this might take some time.
+Will exit after finishing currently running jobs.
+Cancelling snakemake on user request.
