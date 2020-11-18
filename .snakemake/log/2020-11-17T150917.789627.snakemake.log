@@ -1,3 +1,0 @@
-The flag 'temp' used in rule pick_unmapped_reads3 is only valid for outputs, not inputs.
-Building DAG of jobs...
-Nothing to be done.
