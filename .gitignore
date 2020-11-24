@@ -1,0 +1,4 @@
+.snakemake
+..ipynb_checkpoints
+slurm-*
+temp_test
