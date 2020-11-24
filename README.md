@@ -13,7 +13,7 @@ git clone git@github.com:hermanzhaozzzz/snakepipes_fastqc-multiqc.git
 2. if necessary , run trim protocol to make a better raw sequencing file
 ```
 # the trim protocol will form a fix.fastq folder
-# if you do not trim, just make a soft link is okay
+# if you do not trim, just make a soft link like this
 
 ln -s fastq fix.fastq
 ```
