@@ -29,6 +29,7 @@ snakemake -pr -j 1 -s Snakefile.py
 
 
 # if use slurm
+# see https://github.com/hermanzhaozzzz/slurm for more details
 snakemake --profile slurm -pr -j 1 -s Snakefile.py -n
 snakemake --profile slurm -pr -j 1 -s Snakefile.py
 
@@ -39,7 +40,7 @@ snakemake --profile slurm -pr -j 1 -s Snakefile.py
 tail -f ../*/*.log
 ```
 
-![](https://tva1.sinaimg.cn/large/0081Kckwly1gl0dd0zb0ej312f0gd41j.jpg)
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gl0dky3r6gj30no0abq6c.jpg)
 
 ## Update logs:
 - 2020-11-24: 
