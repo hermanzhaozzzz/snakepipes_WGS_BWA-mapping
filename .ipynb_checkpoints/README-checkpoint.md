@@ -1,15 +1,46 @@
-# snakepipes_cutadapt-HISAT2mapping-FPKM-sortBAM
+---
+Author: Herman Zhao
+Email: hermanzhaozzzz@gmail.com
+---
 
 
+# snakepipes_WGS_BAW-mapping
+## Pretreat
+1. do fastqc and multiqc to check the quality of sequencing; see https://github.com/hermanzhaozzzz/snakepipes_fastqc-multiqc 
 ```
-bedtools intersect -a DetectSeq.HEK4.bed -b DigenomeSeq.HEK4.bed -loj > DetectSeq_vs_DigenomeSeq_base-on_DetectSeq_HEK4.csv
+git clone git@github.com:hermanzhaozzzz/snakepipes_fastqc-multiqc.git
+```
+2. if necessary , run trim protocol to make a better raw sequencing file
+```
+# the trim protocol will form a fix.fastq folder
+# if you do not trim, just make a soft link is okay
 
-bedtools intersect -a DigenomeSeq.HEK4.bed -b DetectSeq.HEK4.bed -loj > DetectSeq_vs_DigenomeSeq_base-on_DigenomeSeq_HEK4.csv
+ln -s fastq fix.fastq
+```
+3. fill the SAMPLE list in the snakefile
+4. check the <genome, bwa index file path> in the snakefile
+5. run alignment
+```
+cd snakepipes_WGS_BWA-mapping
+# test
+snakemake -pr -j 1 -s Snakefile.py -n
+# run
+snakemake -pr -j 1 -s Snakefile.py
+
+
+# if use slurm
+snakemake --profile slurm -pr -j 1 -s Snakefile.py -n
+snakemake --profile slurm -pr -j 1 -s Snakefile.py
+
+
+
+
+# use this command to see the running information
+tail -f ../*/*.log
 ```
 
-然后用setect_region.ipynb筛选出only detectseq only digenomeseq和二者share的bed文件
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gl0dd0zb0ej312f0gd41j.jpg)
 
-```
-# check独立性，输出的追加列都是-1，说明无重叠
-bedtools intersect -a DetectSeq_vs_DigenomeSeq_Final-DetectSeqOnly_HEK4.bed -b DetectSeq_vs_DigenomeSeq_Final-DigenomeSeqOnly_HEK4.bed -loj
-```
+## Update logs:
+- 2020-11-24: 
+    - update to a normal format and remove log files

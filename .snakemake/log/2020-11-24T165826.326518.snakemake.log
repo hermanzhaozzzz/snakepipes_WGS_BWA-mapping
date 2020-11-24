@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 1
+Job counts:
+	count	jobs
+	1	BAM_index
+	1	BAM_sort_by_position
+	1	BWA_mapping
+	1	TruSeq_cutadapt
+	1	add_RG_tag
+	1	all
+	1	pick_mapped_reads
+	1	pick_unmapped_reads1
+	1	pick_unmapped_reads2
+	1	pick_unmapped_reads3
+	1	sam2bam
+	11
+
+[Tue Nov 24 16:58:26 2020]
+rule TruSeq_cutadapt:
+    input: ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R1.fastq.gz, ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R2.fastq.gz
+    output: ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R1_cutadapt.fq.gz, ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R2_cutadapt.fq.gz
+    log: ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_cutadapt.log
+    jobid: 1
+    reason: Missing output files: ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R1_cutadapt.fq.gz, ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R2_cutadapt.fq.gz
+    wildcards: date=20201124, cell=293T, seq=DetectSeq, sample=CBE-V-PD7
+
+
+        /home/zhaohuanan/zhaohn_HD/miniconda3/bin/cutadapt -j 24 --times 1  -e 0.1  -O 3  --quality-cutoff 25         -m 55 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC         -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT         -o ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R1_cutadapt.fq.gz -p ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R2_cutadapt.fq.gz ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R1.fastq.gz ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R2.fastq.gz > ../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_cutadapt.log 2>&1
+        
+Submitted job 1 with external jobid '191907'.

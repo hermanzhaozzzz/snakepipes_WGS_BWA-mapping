@@ -1,0 +1,12 @@
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned_sortp.bam
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned_sortp.unmapped.fasta.gz
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned.out.sam
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned_sortp.unmapped.bam
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned_sortp.mapped_F1804_MAPQ20.bam
+../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R1_cutadapt.fq.gz
+../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R2_cutadapt.fq.gz
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned.out.bam
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned.out.fix_RG.bam
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned_sortp.mapped_F1804_MAPQ20_rmdup.bam.bai
+../bam/20201124-293T-DetectSeq_.CBE-V-PD7_Aligned_sortp.unmapped.fasta
