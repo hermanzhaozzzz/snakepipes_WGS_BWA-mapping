@@ -17,6 +17,7 @@ git clone git@github.com:hermanzhaozzzz/snakepipes_fastqc-multiqc.git
 
 ln -s fastq fix.fastq
 ```
+## Run
 3. fill the SAMPLE list in the snakefile
 4. check the <genome, bwa index file path> in the snakefile
 5. run alignment
