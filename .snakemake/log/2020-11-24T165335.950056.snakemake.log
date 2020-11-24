@@ -1,5 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 94 of /gpfs/user/zhaohuanan/3.project/23.2020_11_1120_CBE-HEK4-DigenomeOnly-GuideOnly_and_LZC-CBE-DetectSeqTest-VEGFA/CBE-DetectSeqTest/snakepipes_WGS_BWA-mapping/Snakefile.py:
-Missing input files for rule TruSeq_cutadapt:
-../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R1.fastq.gz
-../fix.fastq/20201124-293T-DetectSeq_.CBE-V-PD7_R2.fastq.gz

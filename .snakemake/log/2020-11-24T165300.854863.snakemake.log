@@ -1,3 +1,0 @@
-NameError in line 58 of /gpfs/user/zhaohuanan/3.project/23.2020_11_1120_CBE-HEK4-DigenomeOnly-GuideOnly_and_LZC-CBE-DetectSeqTest-VEGFA/CBE-DetectSeqTest/snakepipes_WGS_BWA-mapping/Snakefile.py:
-name 'FASTQC' is not defined
-  File "/gpfs/user/zhaohuanan/3.project/23.2020_11_1120_CBE-HEK4-DigenomeOnly-GuideOnly_and_LZC-CBE-DetectSeqTest-VEGFA/CBE-DetectSeqTest/snakepipes_WGS_BWA-mapping/Snakefile.py", line 58, in <module>
