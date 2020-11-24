@@ -5,6 +5,8 @@ Email: hermanzhaozzzz@gmail.com
 
 
 # snakepipes_WGS_BAW-mapping
+## Introduction
+This pipeline is a conventional Whole Genome Sequencing protocol, and it contains some necessary treatment about the bam file.
 ## Pretreat
 1. do fastqc and multiqc to check the quality of sequencing; see https://github.com/hermanzhaozzzz/snakepipes_fastqc-multiqc 
 ```
